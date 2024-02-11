@@ -3,7 +3,7 @@ import logo from '../../assets/logo.png';
 import user from '../../assets/user.png'
 import moment from 'moment';
 import Marquee from "react-fast-marquee";
-import { Container, Form, Nav, Navbar } from 'react-bootstrap';
+import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { AuthContext } from '../../authProvider/authProvider';
 const Header = () => {
@@ -36,11 +36,11 @@ const Header = () => {
                     <Container>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
-                            <Nav className="mx-auto">
-                                <Nav.Link href="/">Home</Nav.Link>
-                                <Nav.Link href="/about">About</Nav.Link>
-                                <Nav.Link href="/career">Career</Nav.Link>
-                            </Nav>
+                            <nav className="mx-auto d-flex gap-2">
+                                <Link to='/' className='text-muted text-decoration-none'>Home</Link>
+                                <Link to='/about' className='text-muted text-decoration-none'>About</Link>
+                                <Link to='/career' className='text-muted text-decoration-none'>Career</Link>
+                            </nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Badge, Card } from 'react-bootstrap';
-import { FaEye, FaRegBookmark, FaShareAlt, FaStar } from 'react-icons/fa';
+import { FaEye, FaRegBookmark, FaRegStar, FaShareAlt, FaStar } from 'react-icons/fa';
+import Rating from 'react-rating';
 import { Link } from 'react-router-dom';
 
 const TrendingNews = ({ singleNews }) => {
@@ -38,11 +39,18 @@ const TrendingNews = ({ singleNews }) => {
                 <Card.Footer className='d-flex justify-content-between align-items-center'>
                     <div className='d-flex gap-2 align-items-center'>
                         <div className='text-danger'>
+                            {/* <FaStar />
                             <FaStar />
                             <FaStar />
                             <FaStar />
-                            <FaStar />
-                            <FaStar />
+                            <FaStar /> */}
+                            <Rating
+                                placeholderRating={rating.number}
+                                emptySymbol={<FaRegStar></FaRegStar>}
+                                placeholderSymbol={<FaStar></FaStar>}
+                                fullSymbol={<FaStar></FaStar>}
+                                readonly
+                            />
                         </div>
                         <span>{rating.number}</span>
                     </div>
