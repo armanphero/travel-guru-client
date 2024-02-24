@@ -8,6 +8,11 @@ const MainContent = () => {
             .then(res => res.json())
             .then(data => setNews(data))
             .catch(error => console.log(error))
+
+        fetch('https://raw.githubusercontent.com/armanphero/the-dragon-news-server/master/data/categories.json')
+            .then(res => res.json())
+            .then(data => console.log(data))
+            .catch(error => console.log(error))
     }, [])
     return (
         <div className='d-flex flex-column gap-4'>

@@ -1,9 +1,11 @@
 import React, { createContext, useContext } from 'react';
-import { Navigate, useLoaderData } from 'react-router-dom';
+import { Navigate, useLoaderData, useLocation } from 'react-router-dom';
 import { AuthContext } from '../authProvider/authProvider';
 
 export const NewsDetailsContext = createContext({});
 const PrivateRoute = ({ children }) => {
+    const location = useLocation();
+    console.log(location);
     const newsData = useLoaderData();
     const { userData, isLoading } = useContext(AuthContext);
     console.log(userData);
