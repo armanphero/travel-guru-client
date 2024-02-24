@@ -3,6 +3,7 @@ import { Col, Row } from 'react-bootstrap';
 import MainContent from '../MainContent/MainContent';
 import RightNav from '../RightNav/RightNav';
 import LeftNav from '../LeftNav/LeftNav';
+import { Outlet } from 'react-router-dom';
 
 const Home = () => {
     return (
@@ -13,7 +14,7 @@ const Home = () => {
                 </Col>
 
                 <Col md={9} lg={6}>
-                    <MainContent />
+                    <Outlet />
                 </Col>
 
                 <Col>

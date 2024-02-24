@@ -16,7 +16,7 @@ const Categories = () => {
             {/* <div className='d-flex justify-content-center'> */}
             <div className='d-flex flex-column gap-1'>
                 {
-                    categoriesData.map(category => <NavLink to={category.name === 'All News' ? '/' : category.name} key={category.id} className={({ isActive }) => isActive ? 'bg-gray text-secondary font-bold fs-5 text-decoration-none rounded py-2 px-5' : 'text-secondary font-bold fs-5 text-decoration-none rounded py-2 px-5'}>{category.name}</NavLink>)
+                    categoriesData.map(category => <NavLink to={`/category/${category.id}`} key={category.id} className={({ isActive }) => isActive ? 'bg-gray text-secondary font-bold fs-5 text-decoration-none rounded py-2 px-5' : 'text-secondary font-bold fs-5 text-decoration-none rounded py-2 px-5'}>{category.name}</NavLink>)
                 }
             </div>
             {/* </div> */}
