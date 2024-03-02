@@ -1,12 +1,17 @@
-import { Outlet } from 'react-router-dom'
+import { useEffect } from 'react'
 import './App.css'
-import Header from './pages/Header/Header'
 
 function App() {
+
+  useEffect(() => {
+    fetch('https://the-dragon-news-server-83uka9n9j-armans-projects-cd84b623.vercel.app/news')
+      .then(res => res.json())
+      .then(data => console.log(data))
+      .catch(error => console.log(error))
+  }, [])
   return (
     <>
-      <Header />
-      <Outlet />
+      <h1>hello</h1>
     </>
   )
 }
